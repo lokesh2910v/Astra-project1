@@ -4,8 +4,11 @@ const mongoose = require('mongoose');
 const userSchema = new mongoose.Schema({
     gmail: { type: String, required: true, unique: true },
     username: { type: String, required: true, unique: true },
-    password: { type: String, required: true },
-    googleId: { type: String } // This field is used for Google login
+    password: {
+        type: String,
+        required: function() { return !this.googleId; } // Only required if not signing in with Google
+    },
+    googleId: { type: String }
 });
 
 const User = mongoose.model('User', userSchema);
