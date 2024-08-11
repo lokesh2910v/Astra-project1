@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #navbar {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            background-color: black;
+            margin-bottom: 2px solid white;
+            height: 60px;
+            /* justify-content: space-between; */
+            align-items: center;
+            margin: 0;
+            position: sticky;
+            top: 0;
+            padding-left: 60px;
+        }
+
+        body {
+            margin: 0;
+        }
+
+        img {
+            height: 50%;
+            margin-left: 20px;
+        }
+
+        div a {
+            text-decoration: none;
+            color: rgba(155, 154, 154, 0.996);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            padding: 20px;
+            font-size: 17px;
+            padding-top:10px ;
+            padding-bottom: 10px;
+        }
+       
+
+        #navbar a:hover {
+            color: white;
+        }
+
+        /* Corrected selector for active state */
+        #navbar a.active {
+            
+            border-radius: 7px;
+            background-color:rgba(123, 120, 120, 0.996);
+            color: white;
+        }
+
+        #navbar img {
+            padding-right: 40px;
+        }
+
+        .c-btn {
+           background-color: rgba(123, 120, 120, 0.996);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+           padding: 8px;
+            font-size: 17px;
+            padding-top:10px ;
+            padding-bottom: 10px;
+            border-radius: 20px;
+            color: white;
+            margin-left: auto;
+    
+        }
+        .s-btn {
+           background-color: rgba(123, 120, 120, 0.996);
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+           padding: 8px;
+            font-size: 17px;
+            padding-top:10px ;
+            padding-bottom: 10px;
+            border-radius: 20px;
+            color: white;
+            margin-left: 1vw;
+            margin-right: 4vw;
+        }
+
+
+    #navbar .c-btn a{
+        color: white;
+    }
+    .c-btn:hover{
+        border: 3px solid rgba(211, 206, 206, 0.929);
+    } 
+
+    #navbar .s-btn a{
+        color: white;
+    }
+    .s-btn:hover{
+        border: 3px solid rgba(211, 206, 206, 0.929);
+    } 
+
+    </style>
+</head>
+<body>
+
+    <div id="navbar"> 
+        <img src="/images/home/astra main.png" alt="image">
+        <div><a href="/" class="<%= currentPage === 'home' ? 'active' : '' %>">Home</a></div>
+        <div><a href="/services" class="<%= currentPage === 'services' ? 'active' : '' %>">Services</a></div>
+        <div><a href="/courses" class="<%= currentPage === 'courses' ? 'active' : '' %>">Courses</a></div>
+        <div><a href="/about" class="<%= currentPage === 'about' ? 'active' : '' %>">About Us</a></div>
+        <div class="c-btn">
+            <a href="/contact" class="<%= currentPage === 'contact' ? 'active' : '' %>">Contact Us</a>
+        </div>
+        <div class="s-btn">
+            <a href="/login" class="<%= currentPage === 'contact' ? 'active' : '' %>">Sign In</a>
+        </div>
+       
+    </div>
+    
+    
+    
+</body>
+</html>
+
+        
+        
+        
+        
